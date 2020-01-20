@@ -55,6 +55,62 @@ namespace AppiumExploratoration
             Assert.AreEqual(number, _calcScreen.PrintInputFieldText());
         }
 
+        [TestCase("1", "2")]
+        [TestCase("3", "4")]
+        [TestCase("5", "6")]
+        [TestCase("7", "8")]
+        [TestCase("9", "0")]
+        public void WhenTwoNumbersAddedResultIsCorrect(string firstNumber, string secondNumber)
+        {
+            _calcScreen.AddNumbers(firstNumber, secondNumber);
+
+            var expected = Convert.ToString(Convert.ToInt32(firstNumber) + Convert.ToInt32(secondNumber));
+
+            Assert.AreEqual(expected, _calcScreen.PrintInputFieldText());
+        }
+
+        [TestCase("1", "2")]
+        [TestCase("3", "4")]
+        [TestCase("5", "6")]
+        [TestCase("7", "8")]
+        [TestCase("9", "0")]
+        public void WhenTwoNumbersSubtractedResultIsCorrect(string firstNumber, string secondNumber)
+        {
+            _calcScreen.SubtractNumbers(firstNumber, secondNumber);
+
+            var expected = Convert.ToString(Convert.ToInt32(firstNumber) - Convert.ToInt32(secondNumber));
+
+            Assert.AreEqual(expected, _calcScreen.PrintInputFieldText());
+        }
+
+        [TestCase("1", "2")]
+        [TestCase("3", "4")]
+        [TestCase("5", "6")]
+        [TestCase("7", "8")]
+        [TestCase("9", "0")]
+        public void WhenTwoNumbersMultipliedResultIsCorrect(string firstNumber, string secondNumber)
+        {
+            _calcScreen.MultiplyNumbers(firstNumber, secondNumber);
+
+            var expected = Convert.ToString(Convert.ToInt32(firstNumber) * Convert.ToInt32(secondNumber));
+
+            Assert.AreEqual(expected, _calcScreen.PrintInputFieldText());
+        }
+
+        [TestCase("1", "2")]
+        [TestCase("3", "4")]
+        [TestCase("5", "6")]
+        [TestCase("7", "8")]
+        [TestCase("9", "0")]
+        public void WhenTwoNumbersDividedResultIsCorrect(string firstNumber, string secondNumber)
+        {
+            _calcScreen.DivideNumbers(firstNumber, secondNumber);
+
+            var expected = Convert.ToString(Convert.ToInt32(firstNumber) / Convert.ToInt32(secondNumber));
+
+            Assert.AreEqual(expected, _calcScreen.PrintInputFieldText());
+        }
+
         [OneTimeTearDown]
         public void Teardown()
         {

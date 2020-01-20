@@ -53,22 +53,22 @@ namespace AppiumExploratoration.ScreenObjects
             DecimalPointButton.Click();
         }
 
-        public void Add()
+        public void ClickAdd()
         {
             AddButton.Click();
         }
 
-        public void Subtract()
+        public void ClickSubtract()
         {
             SubtractButton.Click();
         }
 
-        public void Multiply()
+        public void ClickMultiply()
         {
             MultiplyButton.Click();
         }
 
-        public void Divide()
+        public void ClickDivide()
         {
             DivideButton.Click();
         }
@@ -81,6 +81,38 @@ namespace AppiumExploratoration.ScreenObjects
         public void ClearInputField()
         {
             ClearButton.Click();
+        }
+
+        public void AddNumbers(string firstNumber, string secondNumber)
+        {
+            EnterNumber(firstNumber);
+            ClickAdd();
+            EnterNumber(secondNumber);
+            Calculate();
+        }
+
+        public void SubtractNumbers(string firstNumber, string secondNumber)
+        {
+            EnterNumber(firstNumber);
+            ClickSubtract();
+            EnterNumber(secondNumber);
+            Calculate();
+        }
+
+        public void MultiplyNumbers(string firstNumber, string secondNumber)
+        {
+            EnterNumber(firstNumber);
+            ClickMultiply();
+            EnterNumber(secondNumber);
+            Calculate();
+        }
+
+        public void DivideNumbers(string firstNumber, string secondNumber)
+        {
+            EnterNumber(firstNumber);
+            ClickDivide();
+            EnterNumber(secondNumber);
+            Calculate();
         }
     }
 }
