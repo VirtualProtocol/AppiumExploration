@@ -7,7 +7,7 @@ using System;
 
 namespace AppiumExploratoration
 {
-    public class Tests
+    public class CalculatorTests
     {
         private static AppiumDriver<AppiumWebElement> _mobileDriver;
         private static Uri _appiumLocalService;
