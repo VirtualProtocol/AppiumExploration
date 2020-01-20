@@ -97,10 +97,10 @@ namespace AppiumExploratoration
             Assert.AreEqual(expected, _calcScreen.PrintInputFieldText());
         }
 
-        [TestCase("18", "2")]
-        [TestCase("36", "4")]
-        [TestCase("54", "6")]
-        [TestCase("72", "8")]
+        [TestCase("20", "2")]
+        [TestCase("32", "4")]
+        [TestCase("48", "6")]
+        [TestCase("96", "8")]
         [TestCase("90", "5")]
         public void WhenTwoNumbersDividedResultIsCorrect(string firstNumber, string secondNumber)
         {
