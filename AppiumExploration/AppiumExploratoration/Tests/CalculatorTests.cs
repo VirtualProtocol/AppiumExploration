@@ -9,29 +9,29 @@ namespace AppiumExploratoration.Tests
     {        
         private static CalculatorScreen _calcScreen { get; set; }
 
-        [Before]
-        public void OneTimeSetup()
+        [SetUp]
+        public void Setup()
         {
             _calcScreen = new CalculatorScreen(MobileDriver);
             _calcScreen.ClearInputField();
         }
 
-        //[TestCase("1")]
-        //[TestCase("2")]
-        //[TestCase("3")]
-        //[TestCase("4")]
-        //[TestCase("5")]
-        //[TestCase("6")]
-        //[TestCase("7")]
-        //[TestCase("8")]
-        //[TestCase("9")]
-        //[TestCase("0")]
-        //public void WhenNumberTappedNumberEntered(string number)
-        //{            
-        //    _calcScreen.EnterNumber(number);
-            
-        //    Assert.AreEqual(number, _calcScreen.PrintInputFieldText());
-        //}
+        [TestCase("1")]
+        [TestCase("2")]
+        [TestCase("3")]
+        [TestCase("4")]
+        [TestCase("5")]
+        [TestCase("6")]
+        [TestCase("7")]
+        [TestCase("8")]
+        [TestCase("9")]
+        [TestCase("0")]
+        public void WhenNumberTappedNumberEntered(string number)
+        {
+            _calcScreen.EnterNumber(number);
+
+            Assert.AreEqual(number, _calcScreen.PrintInputFieldText());
+        }
 
         [TestCase("1", "2")]
         [TestCase("3", "4")]

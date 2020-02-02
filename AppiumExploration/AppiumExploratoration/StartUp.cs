@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
 using System;
@@ -14,6 +15,7 @@ namespace AppiumExploratoration
         public static Uri AppiumLocalService { get; set; }
 
         [BeforeTestRun]
+        [OneTimeSetUp]
         public static void BeforeTest()
         {
             AppiumLocalService = new Uri("http://localhost:4723/wd/hub");
@@ -31,6 +33,7 @@ namespace AppiumExploratoration
         }
 
         [AfterTestRun]
+        [OneTimeTearDown]
         public static void AfterTest()
         {
             MobileDriver?.CloseApp();
