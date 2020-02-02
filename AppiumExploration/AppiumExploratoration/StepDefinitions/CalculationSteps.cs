@@ -27,5 +27,22 @@ namespace AppiumExploratoration.StepDefinitions
         {
             _calculatorScreen.Calculate();
         }
+
+        [When(@"I press the subtract button")]
+        public void WhenIPressTheSubtractButton()
+        {
+            _calculatorScreen.ClickSubtract();
+        }
+        [When(@"I press the multiply button")]
+        public void WhenIPressTheMultiplyButton()
+        {
+            _calculatorScreen.ClickMultiply();
+        }
+
+        [When(@"I press the divide button")]
+        public void WhenIPressTheDivideButton()
+        {
+            _calculatorScreen.ClickDivide();
+        }
     }
 }
