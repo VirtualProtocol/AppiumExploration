@@ -28,9 +28,9 @@ Examples:
 	| numberOne | numberTwo | result |
 	| 59        | 35        | 24     |
 	| 96        | 50        | 46     |
-	| 13        | 32        | -19    |
+	| 51        | 32        | 19     |
 	| 79        | 70        | 9      |
-	| 3         | 14        | -11    |
+	| 23        | 14        | 9      |
 
 Scenario: Multiply two numbers
 	When I enter <numberOne> into the calculator
@@ -43,7 +43,7 @@ Examples:
 	| 64        | 7         | 448    |
 	| 17        | 37        | 629    |
 	| 21        | 1         | 21     |
-	| 92        | 97        | 8924   |
+	| 92        | 97        | 8,924  |
 	| 16        | 58        | 928    |
 
 Scenario: Divide two numbers
